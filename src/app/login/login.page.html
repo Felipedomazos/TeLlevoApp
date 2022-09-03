@@ -1,9 +1,47 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>login</ion-title>
+    <center>
+      <ion-title>TeLlevoApp</ion-title>      
+    </center>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <ion-button>Default</ion-button>
+<ion-content [fullscreen]="true">
+
+  <br>
+
+  <center>
+    <h3>Iniciar Sesión</h3>
+  </center>
+
+  <br><br><br>
+
+  <div id="container">
+    <ion-item>
+      <ion-label position="floating">Usuario</ion-label>
+      <ion-input type="text" [(ngModel)]="user.usuario" minlength="3" maxlength="10"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Contraseña</ion-label>
+      <ion-input type="password" [(ngModel)]="user.password" minlength="4" maxlength="4"></ion-input>
+    </ion-item>
+
+    <br><br>
+
+    <ion-button class="ing" expand="block" (click)="ingresar()">Ingresar</ion-button>
+
+    <br>
+
+    <center>
+      <ion-button size="small" (click)="presentToast('bottom')">Olvide mi Contraseña</ion-button>
+    </center>
+
+    <br>
+
+    <center>
+      <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">Crea tu cuenta gratis</a>
+    </center>
+  </div>
+
 </ion-content>
