@@ -1,20 +1,56 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>
-      test 2
-    </ion-title>
+    <ion-item>
+      <ion-icon name="person-circle-outline" slot="start"></ion-icon>
+      <ion-label class="home">
+        {{data.usuario}}
+      </ion-label>
+    </ion-item>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">test</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  
+  <br>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-title size="large">Bienvenido!!</ion-title>
+  <hr>
+  <ion-title size="large">{{data.usuario}}</ion-title>
+
+  <br><br>
+
+  <ion-card padding class="background1">
+    <ion-item>
+      <center>
+        <ion-label>Buscar Locomoción</ion-label>
+      </center>
+    </ion-item>
+  
+    <ion-card-content>
+      <p class="letra1">En esta seccion podras buscar la opcion que mejor se acomode a tus tiempos y costos, ya que cuenta con una busqueda en tiempo real y filtros para ayudarte a encontrar lo que necesitas.</p>
+      <hr>
+      <center>
+        <ion-button fill="outline" slot="end">Buscar</ion-button>
+      </center>
+    </ion-card-content>
+  </ion-card>
+
+  <br>
+
+  <ion-card padding class="background2">
+    <ion-item>
+      <center>
+        <ion-label>Disponer Locomoción</ion-label>        
+      </center>
+    </ion-item>
+  
+    <ion-card-content>
+      <p class="letra2">En esta seccion podras disponer un medio de transporte para compañeros que lo necesiten, podras poner el valor por persona, recorrido, entre otras cosas.</p>
+      <hr>
+      <center>
+        <ion-button fill="outline" slot="end">Publicar</ion-button>
+      </center>
+    </ion-card-content>
+  </ion-card>
+
 </ion-content>
