@@ -3,21 +3,23 @@ ion-content{
     --padding-bottom: 20px;
     --padding-end: 20px;
     --padding-start: 20px;
-    background-color: rgb(255, 255, 255);
+    --ion-background-color: #e8e8e8;
 }
 
 ion-item{
     --padding-bottom: 10px;
 }
 
-ion-header.tituloLogin {
-    color: #00213f;
-}
 
 ion-title.tituloLogin {
-    color: #002d59;
+    color: #f9ba13;
     text-align:center;
+    --ion-background-color: #002d59;
+
 
 }
 
+ion-header {
+    --ion-background-color: #002d59;
 
+}
