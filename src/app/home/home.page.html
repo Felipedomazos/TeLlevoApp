@@ -6,6 +6,11 @@
         {{data.usuario}}
       </ion-label>
     </ion-item>
+    <ion-buttons slot="end">
+      <ion-button (click)="toggleMenu()">
+        <ion-icon slot="icon-only" name="menu"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
@@ -19,7 +24,7 @@
 
   <br><br>
 
-  <ion-card padding class="background1">
+  <ion-card>
     <ion-item>
       <center>
         <ion-label>Buscar Locomoción</ion-label>
@@ -37,7 +42,7 @@
 
   <br>
 
-  <ion-card padding class="background2">
+  <ion-card>
     <ion-item>
       <center>
         <ion-label>Disponer Locomoción</ion-label>        
