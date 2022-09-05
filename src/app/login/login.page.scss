@@ -3,11 +3,17 @@ ion-content{
     --padding-bottom: 20px;
     --padding-end: 20px;
     --padding-start: 20px;
+    background-color: rgb(255, 255, 255);
 }
+
 ion-item{
     --padding-bottom: 10px;
 }
-ion-buttom.ing {
-    --background: #00213f;
-    --color: #adefd1;
+
+ion-header.tituloLogin {
+    color: #00213f;
+}
+
+ion-title.tituloLogin {
+    color: #ffc107;
 }
