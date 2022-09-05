@@ -14,28 +14,45 @@ export class LoginPage implements OnInit {
     contrasena:""
   }
 
-  constructor(private router: Router, private toastController: ToastController) { }
+  field: string ="";
+  constructor(private router: Router, private toastController: ToastController
+     ) { }
 
   ngOnInit() {
   }
 
   ingresar(){
+    if (this.validateModel(this.user)) {
+    this.presentToast("Bienvenido")
     let navigationExtras: NavigationExtras = {
       state: {
         user: this.user
       }
     };
     this.router.navigate(['/home'],navigationExtras);
+  }else{
+    this.presentToast("Falta ingresar "+ this.field,5500)
   }
+}
 
-  async presentToast(position: 'bottom') {
+  validateModel(model: any){
+    for (var [key, value] of Object.entries(model)) {
+
+      if (value == "") {
+        this.field = key;
+        return false;
+      }
+    }
+    return true;
+  }
+  
+    async presentToast(msg: string, duracion?: number) {
     const toast = await this.toastController.create({
-      message: 'Formulario enviado al correo exitosamente!',
-      duration: 2000,
-      position: position
+      message: msg,
+      duration: duracion ? duracion: 2000
     });
-
-    await toast.present();
+    
+    toast.present();
   }
 
 }
