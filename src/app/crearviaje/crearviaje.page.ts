@@ -1,16 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, NavigationExtras } from '@angular/router';
 import { ToastController } from '@ionic/angular';
 
-
 @Component({
-  selector: 'app-contrasena',
-  templateUrl: './contrasena.page.html',
-  styleUrls: ['./contrasena.page.scss'],
+  selector: 'app-crearviaje',
+  templateUrl: './crearviaje.page.html',
+  styleUrls: ['./crearviaje.page.scss'],
 })
-export class ContrasenaPage implements OnInit {
+export class CrearviajePage implements OnInit {
 
-  constructor( private router: Router, private toastController: ToastController) { }
+  constructor(private toastController: ToastController) { }
 
   ngOnInit() {
   }
@@ -24,4 +22,3 @@ export class ContrasenaPage implements OnInit {
     toast.present();
   }
 }
-
