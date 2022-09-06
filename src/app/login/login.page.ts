@@ -31,7 +31,7 @@ export class LoginPage implements OnInit {
     };
     this.router.navigate(['/home'],navigationExtras);
   }else{
-    this.presentToast("Falta ingresar "+ this.field,5500)
+    this.presentToast("Falta ingresar "+this.field,5500)
   }
 }
 
@@ -42,8 +42,8 @@ export class LoginPage implements OnInit {
         this.field = key;
         return false;
       }
+      return true;
     }
-    return true;
   }
   
     async presentToast(msg: string, duracion?: number) {
