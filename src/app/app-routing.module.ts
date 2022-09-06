@@ -14,11 +14,11 @@ const routes: Routes = [
   {
     path: 'login',
     loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+  },  {
+    path: 'contrasena',
+    loadChildren: () => import('./contrasena/contrasena.module').then( m => m.ContrasenaPageModule)
   },
-  {
-    path: 'crear-viaje',
-    loadChildren: () => import('./crear-viaje/crear-viaje.module').then( m => m.CrearViajePageModule)
-  },
+
 
 ];
 

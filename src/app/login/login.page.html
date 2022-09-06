@@ -32,9 +32,9 @@
     <ion-button class="ing" expand="block" (click)="ingresar()">Ingresar</ion-button>
     
     <br>
-
+<!-- (click)="presentToast('hol')" -->
     <center>
-      <ion-button size="small" (click)="presentToast('bottom')">Olvide mi Contraseña</ion-button>
+      <ion-button size="small" [routerLink]="['/contrasena']" >Olvide mi Contraseña</ion-button>
     </center>
 
     <br>
