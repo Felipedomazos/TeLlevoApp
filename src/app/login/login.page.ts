@@ -15,8 +15,8 @@ export class LoginPage implements OnInit {
   }
 
   field: string ="";
-  constructor(private router: Router, private toastController: ToastController
-     ) { }
+  
+  constructor(private router: Router, private toastController: ToastController) { }
 
   ngOnInit() {
   }
@@ -37,10 +37,9 @@ export class LoginPage implements OnInit {
 
   validateModel(model: any){
     for (var [key, value] of Object.entries(model)) {
-
       if (value == "") {
         this.field = key;
-        return false;
+      return false;
       }
       return true;
     }

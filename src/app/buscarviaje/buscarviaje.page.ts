@@ -28,4 +28,8 @@ export class BuscarviajePage implements OnInit {
     
     toast.present();
   }
+
+  toggleMenu() {
+    this.menuCtrl.toggle();
+  }
 }
