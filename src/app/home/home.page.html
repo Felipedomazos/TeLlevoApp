@@ -1,7 +1,7 @@
 <ion-header>
   <ion-toolbar>
     <ion-item>
-      <ion-icon name="person-circle-outline" slot="start"></ion-icon>
+      <ion-icon color="light" name="person-outline" slot="start"></ion-icon>
       <ion-label class="home">
         {{data.usuario}}
       </ion-label>
@@ -14,49 +14,55 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  
+<ion-content [fullscreen]="true" scroll-y="false">
+
   <br>
-  <ion-title size="large">
-    <b>Bienvenido!!</b>
-  </ion-title>
-  <hr>
-  <ion-title size="large">{{data.usuario}}</ion-title>
+
+  <ion-breadcrumbs>
+    <ion-breadcrumb [routerLink]="['/home']">Home</ion-breadcrumb>
+  </ion-breadcrumbs>
+
+  <ion-slides>
+    <ion-slide>
+      <div class="slide">
+        <img src="">
+        <h2>Bienvenido</h2>
+        <p>
+          Bienvenido a <b>TeLlevoApp</b>. aplicación hecha por y para estudiantes del Instituto <b>DuocUc</b>.
+        </p>
+      </div>
+    </ion-slide>
+
+    <ion-slide>
+      <img src="">
+      <h2>Que es TeLlevoApp?</h2>
+      <p>
+        <b>TeLlevoApp</b> es una aplicación que permite que los alumnos se organicen para que puedan retornar a sus
+        hogares utilizando vehiculos de algunos alumnos que si tienen movilizacion propia.
+      </p>
+    </ion-slide>
+
+    <ion-slide>
+      <img src="">
+      <h2>Listo para la avetura?</h2>
+      <ion-button color="dark" fill="clear">¡¡Vamos!!<ion-icon slot="end" name="arrow-forward"></ion-icon>
+      </ion-button>
+    </ion-slide>
+  </ion-slides>
 
   <br><br>
 
-  <ion-card>
-    <ion-item class="home">
-      <center>
-        <ion-label>Buscar Locomoción</ion-label>
-      </center>
-    </ion-item>
-  
-    <ion-card-content>
-      <p class="letra1">En esta seccion podras buscar la opcion que mejor se acomode a tus tiempos y costos, ya que cuenta con una busqueda en tiempo real y filtros para ayudarte a encontrar lo que necesitas.</p>
-      <hr>
-      <center>
-        <ion-button fill="outline" slot="end">Buscar</ion-button>
-      </center>
-    </ion-card-content>
-  </ion-card>
+  <ion-item [routerLink]="['/buscarviaje']">
+    <ion-icon class="home" name="search" slot="start"></ion-icon>
+    <ion-label>Buscar Locomoción</ion-label>
+    <ion-icon name="chevron-forward" slot="end"></ion-icon>
+  </ion-item>
+  <hr>
+  <ion-item [routerLink]="['/crearviaje']">
+    <ion-icon class="home" name="car" slot="start"></ion-icon>
+    <ion-label>Disponer Locomoción</ion-label>
+    <ion-icon name="chevron-forward" slot="end"></ion-icon>
+  </ion-item>
 
-  <br>
-
-  <ion-card>
-    <ion-item class="home">
-      <center>
-        <ion-label>Disponer Locomoción</ion-label>        
-      </center>
-    </ion-item>
-  
-    <ion-card-content>
-      <p class="letra2">En esta seccion podras disponer un medio de transporte para compañeros que lo necesiten, podras poner el valor por persona, recorrido, entre otras cosas.</p>
-      <hr>
-      <center>
-        <ion-button fill="outline" slot="end">Publicar</ion-button>
-      </center>
-    </ion-card-content>
-  </ion-card>
 
 </ion-content>
