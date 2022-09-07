@@ -29,4 +29,7 @@ export class CrearviajePage implements OnInit {
     this.menuCtrl.toggle();
   }
 
+  atras(){
+    this.router.navigate(['/home'])
+  }
 }
