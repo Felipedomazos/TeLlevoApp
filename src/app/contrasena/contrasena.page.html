@@ -1,13 +1,13 @@
 <ion-header class="tituloLogin">
   <ion-toolbar>
-    <ion-title class="titulo">
+    <ion-title class="tituloLogin">
       <b>TeLlevoApp</b>
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" scroll-y="false">
   <br>
   <br>
   <br>
@@ -22,7 +22,7 @@
     <ion-button size="small" [routerLink]="['/contrasena']" (click)="presentToast('Correo enviado con exito')" >Cambiar Contraseña</ion-button>
   </ion-card-content>
 </ion-card>
-<ion-button size="small" [routerLink]="['/login']">Atras</ion-button>
+<ion-button size="small" (click)="atras()">Atras</ion-button>
 
 </center>
 </ion-content>

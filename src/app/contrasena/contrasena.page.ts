@@ -15,6 +15,10 @@ export class ContrasenaPage implements OnInit {
   ngOnInit() {
   }
 
+  atras(){
+    this.router.navigate(['/home'])
+  }
+
   async presentToast(msg: string, duracion?: number) {
     const toast = await this.toastController.create({
       message: msg,
