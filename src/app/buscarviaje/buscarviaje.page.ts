@@ -11,7 +11,7 @@ import { ToastController } from '@ionic/angular';
 })
 export class BuscarviajePage implements OnInit {
 
-  constructor(private menuCtrl: MenuController,private router: Router,private toastController: ToastController) { }
+constructor(private menuCtrl: MenuController,private router: Router,private toastController: ToastController) { }
 
   ngOnInit() {
   }
@@ -27,5 +27,9 @@ export class BuscarviajePage implements OnInit {
     });
     
     toast.present();
+  }
+
+  toggleMenu() {
+    this.menuCtrl.toggle();
   }
 }

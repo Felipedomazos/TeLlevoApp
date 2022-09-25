@@ -3,8 +3,8 @@ import { CommonModule } from '@angular/common';
 import { IonicModule, LoadingController } from '@ionic/angular';
 import { FormsModule } from '@angular/forms';
 import { HomePage } from './home.page';
-
 import { HomePageRoutingModule } from './home-routing.module';
+import { MatSliderModule } from '@angular/material/slider';
 
 
 
@@ -28,7 +28,8 @@ export class ExampleComponent {
     CommonModule,
     FormsModule,
     IonicModule,
-    HomePageRoutingModule
+    HomePageRoutingModule,
+    MatSliderModule,
   ],
   declarations: [HomePage]
 })
