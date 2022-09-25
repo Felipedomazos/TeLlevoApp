@@ -22,10 +22,19 @@ const routes: Routes = [
   {
     path: 'crearviaje',
     loadChildren: () => import('./crearviaje/crearviaje.module').then( m => m.CrearviajePageModule)
-  },  {
+  },
+  {
     path: 'buscarviaje',
     loadChildren: () => import('./buscarviaje/buscarviaje.module').then( m => m.BuscarviajePageModule)
   },
+  {
+    path: 'not-found',
+    loadChildren: () => import('./not-found/not-found.module').then( m => m.NotFoundPageModule)
+  },
+  {
+    path: '**',
+    loadChildren: () => import('./not-found/not-found.module').then( m => m.NotFoundPageModule)
+  }
 
 
 
