@@ -20,28 +20,28 @@
     <ion-card-content>
       <ion-item>
         <ion-label>Fecha</ion-label>
-        <ion-input type="date"></ion-input>
+        <ion-input type="date" [(ngModel)]="fecha"></ion-input>
       </ion-item>
       <ion-item>
         <ion-label>Hora de Viaje</ion-label>       
-        <ion-input type="time"></ion-input>
+        <ion-input type="time" [(ngModel)]="hora"></ion-input>
       </ion-item>
       <ion-item>
         <ion-label>Maximo Pasajeros</ion-label>       
-        <ion-input type="number" max="8"></ion-input>
+        <ion-input type="number" max="8" [(ngModel)]="pasajeros"></ion-input>
       </ion-item>
       <ion-item>
         <ion-label>Destino</ion-label>       
-        <ion-input type="text"></ion-input>
+        <ion-input type="text" [(ngModel)]="destino"></ion-input>
       </ion-item>
       <ion-item>
         <ion-label>Precio Viaje</ion-label>       
-        <ion-input type="number"></ion-input>
+        <ion-input type="number" [(ngModel)]="precio"></ion-input>
       </ion-item>
 
     </ion-card-content>
   </ion-card>
- <center><ion-button size="small" (click)="presentToast('Viaje Publicado con Exito!')" >Crear Viaje</ion-button></center>
+ <center><ion-button size="small" (click)="guardar()">Crear Viaje</ion-button></center>
  <center><ion-button size="small" (click)="atras()">Atras</ion-button></center>
 
      
