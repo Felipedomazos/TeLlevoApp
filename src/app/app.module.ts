@@ -6,12 +6,19 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { IonicStorageModule } from '@ionic/storage-angular';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
+import { ComponentsModule } from './components/components.module';
 
 
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, IonicStorageModule.forRoot(), HttpClientModule],
+  imports: 
+  [BrowserModule, 
+    IonicModule.forRoot(), 
+    AppRoutingModule, 
+    IonicStorageModule.forRoot(), 
+    HttpClientModule,
+  ComponentsModule],
   providers: [
     HttpClient,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],

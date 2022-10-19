@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { TopChoferesPageRoutingModule } from './top-choferes-routing.module';
 
 import { TopChoferesPage } from './top-choferes.page';
+import { ComponentsModule } from '../components/components.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    TopChoferesPageRoutingModule
+    TopChoferesPageRoutingModule,
+    ComponentsModule
   ],
   declarations: [TopChoferesPage]
 })
