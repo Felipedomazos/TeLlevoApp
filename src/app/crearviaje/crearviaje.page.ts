@@ -14,7 +14,7 @@ export class CrearviajePage implements OnInit {
   fecha: Date;
   hora: Date;
   pasajeros: Number;
-  destino: String;
+  destino: string;
   precio: Number;
 
   constructor(private toastController: ToastController, private menuCtrl: MenuController,private activeroute: ActivatedRoute,private router: Router, public bdlocalservice: BdLocalService) { }

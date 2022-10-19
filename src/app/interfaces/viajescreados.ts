@@ -1,7 +1,7 @@
 export interface Viajescreados {
-    fecha: Date;
-    hora: Date;
-    pasajeros: Number;
-    destino: String;
-    precio: Number;
+    fechaViaje: Date;
+    horaViaje: Date;
+    pasajeroViaje: Number;
+    destinoViaje: String;
+    precioViaje: Number;
 }

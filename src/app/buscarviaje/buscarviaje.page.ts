@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MenuController } from '@ionic/angular';
 import { ActivatedRoute, Router, NavigationExtras } from '@angular/router';
 import { ToastController } from '@ionic/angular';
-
+import { BdLocalService } from '../services/bd-local.service';
 
 @Component({
   selector: 'app-buscarviaje',
@@ -11,9 +11,11 @@ import { ToastController } from '@ionic/angular';
 })
 export class BuscarviajePage implements OnInit {
 
-constructor(private menuCtrl: MenuController,private router: Router,private toastController: ToastController) { }
+constructor(private menuCtrl: MenuController,private router: Router,private toastController: ToastController, public bdlocalservice: BdLocalService) { 
+}
 
   ngOnInit() {
+    console.log("viaje: ", this.bdlocalservice.viaje);
   }
 
   atras(){
