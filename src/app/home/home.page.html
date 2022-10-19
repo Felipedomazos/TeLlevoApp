@@ -17,7 +17,6 @@
 <ion-content [fullscreen]="true" scroll-y="false">
 
   <br>
-
   <ion-breadcrumbs>
     <ion-breadcrumb [routerLink]="['/home']">Home</ion-breadcrumb>
   </ion-breadcrumbs>
@@ -36,22 +35,34 @@
 
     <ion-slide>
       <img src="">
-      <h2>Que es TeLlevoApp?</h2>
+      <h2>¿Que es TeLlevoApp?</h2>
       <p>
         <b>TeLlevoApp</b> es una aplicación que permite que los alumnos se organicen para que puedan retornar a sus
         hogares utilizando vehiculos de algunos alumnos que si tienen movilizacion propia.
       </p>
     </ion-slide>
 
+    
+    <ion-slide>
+      <h2>Conoce el Ranking de Choferes</h2>
+      <p>Los choferes con mas viajes al mes reciben cupones de descuento!</p>
+      <ion-button [routerLink]="['/top-choferes']" color="dark" fill="clear">Revisar Ranking Mensual<ion-icon slot="end" name="arrow-forward"></ion-icon>
+      </ion-button>
+
+  
+    </ion-slide>
+
+
     <ion-slide>
       <img src="">
-      <h2>Listo para la aventura?</h2>
+      <h2>¿Listo para la aventura?</h2>
       <ion-button [routerLink]="['/not-found']" color="dark" fill="clear">¡¡Vamos!!<ion-icon slot="end" name="arrow-forward"></ion-icon>
       </ion-button>
     </ion-slide>
   </ion-slides>
 
-  <br><br>
+
+  <br>
 
   <ion-item [routerLink]="['/buscarviaje']">
     <ion-icon class="home" name="search" slot="start"></ion-icon>

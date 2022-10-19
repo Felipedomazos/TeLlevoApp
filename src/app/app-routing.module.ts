@@ -28,6 +28,10 @@ const routes: Routes = [
     loadChildren: () => import('./buscarviaje/buscarviaje.module').then( m => m.BuscarviajePageModule)
   },
   {
+    path: 'top-choferes',
+    loadChildren: () => import('./top-choferes/top-choferes.module').then( m => m.TopChoferesPageModule)
+  },
+  {
     path: 'not-found',
     loadChildren: () => import('./not-found/not-found.module').then( m => m.NotFoundPageModule)
   },
@@ -35,6 +39,7 @@ const routes: Routes = [
     path: '**',
     loadChildren: () => import('./not-found/not-found.module').then( m => m.NotFoundPageModule)
   }
+ 
 
 
 

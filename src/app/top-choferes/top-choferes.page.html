@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>top-choferes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+  <center>
+    <h2>Ranking</h2>
+    <img src="data:image/png;base64,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">
+  
+    <ion-button (click)="runHttp()">Ver Top Choferes</ion-button>
+    <ion-list class="inner-scroll scroll-y" *ngFor="let chofer of choferes" >
+      <ion-item>
+        <ion-avatar slot="start">
+    <img src="https://media.istockphoto.com/vectors/user-icon-flat-isolated-on-white-background-user-symbol-vector-vector-id1300845620?k=20&m=1300845620&s=612x612&w=0&h=f4XTZDAv7NPuZbG0habSpU0sNgECM0X7nbKzTUta3n8=">
+        </ion-avatar>
+        <h7>{{ chofer.nombre }}</h7> &nbsp;<h7>Viajes:</h7> &nbsp; &nbsp; <h7>{{ chofer.viajes }}</h7>
+      </ion-item>
+      </ion-list>
+    </center>
+</ion-content>
