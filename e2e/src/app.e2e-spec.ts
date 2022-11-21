@@ -1,14 +1,14 @@
 import { AppPage } from './app.po';
 
-describe('new App', () => {
+describe('Iniciar Aplicacion', () => {
   let page: AppPage;
 
   beforeEach(() => {
     page = new AppPage();
   });
 
-  it('should be blank', () => {
+  it('Aplicacion Iniciada', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toContain('Start with Ionic UI Components');
+    expect(page.getPageTitle()).toContain('TeLlevoApp');
   });
 });

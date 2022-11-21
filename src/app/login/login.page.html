@@ -19,21 +19,23 @@
   <div>
     <ion-item>
       <ion-label position="floating">Usuario</ion-label>
-      <ion-input type="text" [(ngModel)]="user.usuario" minlength="3" maxlength="10"></ion-input>
+      <ion-input id="user" type="text" [(ngModel)]="user.usuario" minlength="3" maxlength="10"></ion-input>
     </ion-item>
 
     <ion-item>
       <ion-label position="floating">Contraseña</ion-label>
-      <ion-input type="password" [(ngModel)]="user.password" minlength="4" maxlength="12"></ion-input>
+      <ion-input id="pass" type="password" [(ngModel)]="user.password" minlength="4" maxlength="12"></ion-input>
     </ion-item>
 
     <br><br>
 
-    <ion-button class="ing" expand="block" (click)="ingresar()">Ingresar</ion-button>
+    <center>
+          <button class="ing" expand="block" (click)="ingresar()">Ingresar</button>
+    </center>
     
     <br>
     <center>
-      <ion-button size="small" [routerLink]="['/contrasena']" >Olvide mi Contraseña</ion-button>
+      <button class="contra" size="small" [routerLink]="['/contrasena']" >Olvide mi Contraseña</button>
     </center>
 
     <br>

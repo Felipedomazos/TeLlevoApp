@@ -5,7 +5,15 @@ export class AppPage {
     return browser.get('/');
   }
 
-  getParagraphText() {
-    return element(by.deepCss('app-root ion-content')).getText();
+  getPageTitle() {
+    return element(by.css('.tituloLogin ion-title')).getText();
+  }
+  
+  getUser() {
+    return element(by.id('user')).getText();
+  }
+
+  getPass() {
+    return element(by.id('pass')).getText();
   }
 }
