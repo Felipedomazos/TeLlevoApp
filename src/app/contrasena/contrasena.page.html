@@ -11,18 +11,20 @@
   <br>
   <br>
   <br>
-<center>Restablecimiento de Contraseña</center>
+  <ion-label class="tituloContra">
+    <center>Restablecimiento de Contraseña</center>
+  </ion-label>
 <center>
 <ion-card>
 
   <ion-card-content>
     
     <ion-label position="floating">Correo Electronico</ion-label>
-    <ion-input type="text" [(ngModel)]="user.usuario" minlength="3" maxlength="10"></ion-input>
-    <ion-button size="small" [routerLink]="['/contrasena']" (click)="presentToast('Correo enviado con exito')" >Cambiar Contraseña</ion-button>
+    <ion-input type="text" minlength="3" maxlength="10"></ion-input>
+    <ion-button size="small" (click)="presentToast('Correo enviado con exito')" >Cambiar Contraseña</ion-button>
   </ion-card-content>
 </ion-card>
-<ion-button size="small" (click)="atras()">Atras</ion-button>
+<button rel="stylesheet" href="/assets/reboot.css" class="atras" size="small" (click)="atras()">Atras</button>
 
 </center>
 </ion-content>

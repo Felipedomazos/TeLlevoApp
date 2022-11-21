@@ -16,7 +16,7 @@ export class ContrasenaPage implements OnInit {
   }
 
   atras(){
-    this.router.navigate(['/home'])
+    this.router.navigate(['/login'])
   }
 
   async presentToast(msg: string, duracion?: number) {
