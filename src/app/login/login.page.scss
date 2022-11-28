@@ -9,15 +9,16 @@ ion-item{
     --padding-bottom: 10px;
 }
 
-
-ion-title.tituloLogin {
+.tituloLogin {
     color: #f9ba13;
     text-align:center;
     --ion-background-color: #002d59;
-}
-
-ion-header {
-    --ion-background-color: #002d59;
+    background-color: #002d59;
+    --min-height: 56px;
+    --background: #002d59;
+    font-size: 20px;
+    letter-spacing: 0.0125em;
+    padding: 6px 20px;
 }
 
 .contra {

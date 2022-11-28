@@ -1,16 +1,30 @@
-ion-header {
+.tituloHome {
+  color: #ffffff;
   --ion-background-color: #002d59;
+  background-color: #002d59;
+  --background: #002d59;
 }
-ion-card {
-  --ion-background-color: #002d59;
+
+.menuIcon {
+  color: #ffffff;
+  --padding-top: 12px;
+  --padding-end: 12px;
+  --padding-bottom: 12px;
+  --padding-start: 12px;
+  --border-radius: 50%;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  width: 48px;
+  height: 48px;
+  --color: initial;
+  --background: transparent;
+  --background-activated: transparent;
+  --background-focused: currentColor;
+  --background-hover: currentColor;
 }
-ion-button {
-  color: white;
-}
-ion-label.home {
-  --ion-background-color: #002d59;
-  color:#ffffff;
-}
+
 .swiper-slide {
   display: block;
 }

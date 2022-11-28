@@ -1,13 +1,13 @@
-<ion-header>
-  <ion-toolbar>
+<ion-header class="tituloHome">
+  <ion-toolbar class="tituloHome">
     <ion-item>
       <ion-icon color="light" name="person-outline" slot="start"></ion-icon>
-      <ion-label class="home">
+      <ion-label class="tituloHome">
         {{data.usuario}}
       </ion-label>
     </ion-item>
-    <ion-buttons slot="end">
-      <ion-button (click)="toggleMenu()">
+    <ion-buttons class="menuIcon" slot="end">
+      <ion-button class="menuIcon" (click)="toggleMenu()">
         <ion-icon slot="icon-only" name="menu"></ion-icon>
       </ion-button>
     </ion-buttons>
@@ -22,7 +22,6 @@
     <ion-breadcrumb [routerLink]="['/map']">Mapa</ion-breadcrumb>
 
   </ion-breadcrumbs>
-  <mat-slider min="1" max="100" step="1" value="50"></mat-slider>
 
   <ion-slides>
     <ion-slide>
