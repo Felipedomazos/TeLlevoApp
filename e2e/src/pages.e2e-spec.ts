@@ -19,10 +19,10 @@ describe("Pruebas", () => {
         browser.driver.sleep(1500);
         element(by.buttonText("Atras")).click();
     });
-    //Prueba 4
-    it("El usuario puede iniciar sesion en la aplicacion", () => {
+    //Prueba 3
+    it("Se muestra el mensaje de error al ingresar sin credenciales", () => {
         browser.driver.sleep(1000);
         expect(element(by.buttonText("Ingresar")).click());
-        expect(element(by.css('.home ion-label')).getText()).toContain("fe.domazos");
+        browser.driver.sleep(1000);
     });
 });
