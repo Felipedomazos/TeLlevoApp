@@ -3,6 +3,7 @@ import { MenuController } from '@ionic/angular';
 import { ActivatedRoute, Router, NavigationExtras } from '@angular/router';
 import { ToastController } from '@ionic/angular';
 import { BdLocalService } from '../services/bd-local.service';
+import { Viajescreados } from '../interfaces/viajescreados';
 
 @Component({
   selector: 'app-buscarviaje',
@@ -11,11 +12,19 @@ import { BdLocalService } from '../services/bd-local.service';
 })
 export class BuscarviajePage implements OnInit {
 
-constructor(private menuCtrl: MenuController,private router: Router,private toastController: ToastController, public bdlocalservice: BdLocalService) { 
+  viaje: Viajescreados[] = [];
+  data: any;
+
+constructor(private menuCtrl: MenuController,private activeroute: ActivatedRoute,private router: Router,private toastController: ToastController, public bdlocalservice: BdLocalService) { 
+  this.activeroute.queryParams.subscribe(params => { 
+    if (this.router.getCurrentNavigation().extras.state) { 
+      this.data = this.router.getCurrentNavigation().extras.state.viaje; 
+      console.log(this.data) 
+    }else{this.router.navigate(["/buscarviaje"])} 
+  });
 }
 
   ngOnInit() {
-    console.log("viaje: ", this.bdlocalservice.viaje);
   }
 
   atras(){

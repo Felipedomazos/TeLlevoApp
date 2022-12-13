@@ -21,14 +21,15 @@ export class BdLocalService {
     await this.storage.create();
   }
 
-  guardarViajes(fecha: Date, hora: Date, pasajeros: Number, destino: String, precio: Number) {
-    this.viaje.unshift({ fechaViaje: fecha, horaViaje: hora, pasajeroViaje: pasajeros, destinoViaje: destino, precioViaje: precio })
+  guardarViajes(fecha: string, hora: string, pasajeros: string, destino: string, precio: string) {
+    this.viaje.unshift({ fecha: fecha, hora: hora, pasajero: pasajeros, destino: destino, precio: precio })
     this._storage.set('viaje', this.viaje);
     this.presentToast("Viaje creado con Exito!!")
   }
+
   async cargarViajes() {
     const miViaje = await this.storage.get('viaje');
-    console.log('Viaje', miViaje);
+    console.log('viaje', miViaje);
   }
 
   async init() {

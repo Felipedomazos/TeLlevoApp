@@ -10,29 +10,29 @@
     <ion-card-content>
       <ion-item>
         <ion-label>Fecha</ion-label>
-        <ion-input type="date" [(ngModel)]="fecha"></ion-input>
+        <ion-input type="date" [(ngModel)]="viaje.fecha"></ion-input>
       </ion-item>
       <ion-item>
-        <ion-label>Hora de Viaje</ion-label>
-        <ion-input type="time" [(ngModel)]="hora"></ion-input>
+        <ion-label>Hora</ion-label>
+        <ion-input type="time" [(ngModel)]="viaje.hora"></ion-input>
       </ion-item>
       <ion-item>
         <ion-label>Maximo Pasajeros</ion-label>
-        <ion-input type="number" max="8" [(ngModel)]="pasajeros"></ion-input>
+        <ion-input type="number" max="8" [(ngModel)]="viaje.pasajeros"></ion-input>
       </ion-item>
       <ion-item>
         <ion-label>Destino</ion-label>
-        <ion-input type="text" [(ngModel)]="destino"></ion-input>
+        <ion-input type="text" [(ngModel)]="viaje.destino"></ion-input>
       </ion-item>
       <ion-item>
         <ion-label>Precio Viaje</ion-label>
-        <ion-input type="number" [(ngModel)]="precio"></ion-input>
+        <ion-input type="number" [(ngModel)]="viaje.precio"></ion-input>
       </ion-item>
 
     </ion-card-content>
   </ion-card>
   <center>
-    <ion-button size="small" (click)="guardar()">Crear Viaje</ion-button>
+    <ion-button size="small" (click)="ingresar()" (click)="guardar()">Crear Viaje</ion-button>
   </center>
   <center>
     <ion-button size="small" (click)="atras()">Atras</ion-button>

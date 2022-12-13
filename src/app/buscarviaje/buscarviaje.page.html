@@ -11,47 +11,25 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content [fullscreen]="true">
   
   <center><h3>Buscar Viajes</h3></center>
 
   <ion-searchbar></ion-searchbar>
 
-  <ion-card>
+  <ion-card *ngIf="data">
     <ion-card-content>
-  <div>
-    Destino: Quilpue
-    <br>
-    Fecha: 7/9/22
-    <br>
-    Hora de Salida: 21:00
-    <br>
-    Precio: $1.500
-    <br>
-    Pasajeros disponibles: 1
-    <br>
-    <ion-button size="small" (click)="atras()" (click)="presentToast('Viaje Reservado con exito!')">Reservar Viaje</ion-button>
-  </div>
-
-</ion-card-content>
+      <div>
+        <p><b>Destino:</b> {{ data.destino }}</p>
+        <p><b>Fecha (Año/Mes/Dia):</b> {{ data.fecha }}</p>
+        <p><b>Hora:</b> {{ data.hora }}</p>
+        <p><b>Precio:</b> ${{ data.precio }}</p>
+        <p><b>Pasajeros:</b> {{ data.pasajeros }}</p>
+        <br>
+        <ion-button size="small" (click)="atras()" (click)="presentToast('Viaje Reservado con exito!')">Reservar Viaje</ion-button>
+      </div>
+    </ion-card-content>
   </ion-card>
 
-  <ion-card>
-    <ion-card-content>
-  <div>
-    Destino: Villa Alemana
-    <br>
-    Fecha: 7/9/22
-    <br>
-    Hora de Salida: 22:00
-    <br>
-    Precio: $1.800
-    <br>
-    Pasajeros disponibles: 3
-    <ion-button size="small"  (click)="presentToast('Viaje Reservado con exito!')">Reservar Viaje</ion-button>
-  </div>
-
-</ion-card-content>
-  </ion-card>
   <center><ion-button size="small" (click)="atras()">Atras </ion-button></center>
 </ion-content>

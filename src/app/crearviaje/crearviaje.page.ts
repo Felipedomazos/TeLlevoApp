@@ -11,15 +11,42 @@ import { BdLocalService } from '../services/bd-local.service';
 })
 export class CrearviajePage implements OnInit {
 
-  fecha: Date;
-  hora: Date;
-  pasajeros: Number;
-  destino: string;
-  precio: Number;
+  viaje={
+    fecha: "",
+    hora: "",
+    pasajeros: "",
+    destino: "",
+    precio: ""
+  }
+
+  field: string= "";
 
   constructor(private toastController: ToastController, private menuCtrl: MenuController,private activeroute: ActivatedRoute,private router: Router, public bdlocalservice: BdLocalService) { }
 
   ngOnInit() {
+  }
+
+  ingresar(){
+    if (this.validateModel(this.viaje)) {
+    let navigationExtras: NavigationExtras = {
+      state: {
+        viaje: this.viaje
+      }
+    };
+    this.router.navigate(['/buscarviaje'],navigationExtras);
+  }else{
+    this.presentToast("Falta ingresar "+this.field,4000)
+  }
+}
+
+  validateModel(model: any){
+    for (var [key, value] of Object.entries(model)) {
+      if (value == "") {
+        this.field = key;
+      return false;
+      }
+      return true;
+    }
   }
 
   async presentToast(msg: string, duracion?: number) {
@@ -40,6 +67,6 @@ export class CrearviajePage implements OnInit {
   }
 
   guardar(){
-    this.bdlocalservice.guardarViajes(this.fecha,this.hora,this.pasajeros,this.destino,this.precio)
+    this.bdlocalservice.guardarViajes(this.viaje.fecha,this.viaje.hora,this.viaje.pasajeros,this.viaje.destino,this.viaje.precio)
   }
 }
