@@ -7,7 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { IonicStorageModule } from '@ionic/storage-angular';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
 import { ComponentsModule } from './components/components.module';
-
+import { EmailComposer } from '@awesome-cordova-plugins/email-composer/ngx';
 
 const getConfig = () => {
   let config = {
@@ -42,6 +42,7 @@ const getConfig = () => {
   ComponentsModule],
   providers: [
     HttpClient,
+    EmailComposer,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
 })

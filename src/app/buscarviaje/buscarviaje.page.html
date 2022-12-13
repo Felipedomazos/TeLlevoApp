@@ -26,7 +26,7 @@
         <p><b>Precio:</b> ${{ data.precio }}</p>
         <p><b>Pasajeros:</b> {{ data.pasajeros }}</p>
         <br>
-        <ion-button size="small" (click)="atras()" (click)="presentToast('Viaje Reservado con exito!')">Reservar Viaje</ion-button>
+        <ion-button size="small" (click)="enviarEmail()" (click)="presentToast('Viaje Reservado con exito!')">Reservar Viaje</ion-button>
       </div>
     </ion-card-content>
   </ion-card>
